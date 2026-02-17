@@ -41,19 +41,22 @@
             box-shadow: 0 15px 30px rgba(246, 128, 2, 0.2);
         }
 
-        .video-card {
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            background: black;
+        /* YouTube Container Fix */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            height: 0;
             border-radius: 2.5rem;
             overflow: hidden;
+            background: #000;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            aspect-ratio: 16/9;
         }
-        
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
         }
 
         .plan-card {
@@ -133,28 +136,36 @@
         
         <div class="grid md:grid-cols-2 gap-x-10 gap-y-16">
             <div>
-                <div class="video-card"><video controls preload="metadata"><source src="video 1.mp4" type="video/mp4"></video></div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/QKjC2JdjZoc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div class="mt-6">
                     <span class="text-[#f68002] text-[10px] font-black uppercase tracking-widest">• Commercial</span>
-                    <h3 class="text-2xl font-bold mt-1">Global Express Promo</h3>
+                    <h3 class="text-2xl font-bold mt-1">Global Express Commercial</h3>
                 </div>
             </div>
             <div>
-                <div class="video-card"><video controls preload="metadata"><source src="video 2.mp4" type="video/mp4"></video></div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/J9OUWb8o_f4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div class="mt-6">
                     <span class="text-[#f68002] text-[10px] font-black uppercase tracking-widest">• Promo</span>
                     <h3 class="text-2xl font-bold mt-1">FutureLink AI Course</h3>
                 </div>
             </div>
             <div>
-                <div class="video-card"><video controls preload="metadata"><source src="video 3.mp4" type="video/mp4"></video></div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/n53S4yEg0Zc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div class="mt-6">
                     <span class="text-[#f68002] text-[10px] font-black uppercase tracking-widest">• Animation</span>
                     <h3 class="text-2xl font-bold mt-1">JBL Animated Ad</h3>
                 </div>
             </div>
             <div>
-                <div class="video-card"><video controls preload="metadata"><source src="video 4.mp4" type="video/mp4"></video></div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/oMm82mzyiOo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div class="mt-6">
                     <span class="text-[#f68002] text-[10px] font-black uppercase tracking-widest">• Animation</span>
                     <h3 class="text-2xl font-bold mt-1">Liquid Death Animated Ad</h3>
